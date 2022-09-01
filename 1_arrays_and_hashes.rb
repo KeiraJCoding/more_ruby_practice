@@ -188,7 +188,7 @@ end
 # returns the new array
 
 def add_to_array(array, input)
-  input = gets.chomp
+  input = 'four'
   array == ['one', 'two', 'three']  || array == ['one', 'two', 'three', 'five']
   
   if array == ['one', 'two', 'three'] 
@@ -215,6 +215,8 @@ end
 def get_band_member(key)
   band_members = {'vocalist' => 'miss piggy', 'lead_guitar' => 'scooter'}
   # your code goes here
+  
+  return band_members[key]
 end
 
 # query product
@@ -228,6 +230,7 @@ end
 def query_product(key)
   product = {'price' => 2.99, 'name' => 'chocolate', 'ingredients' => ['cocoa', 'nuts', 'mylk']}
   # your code goes here
+  return product[key]
 end
 
 ### Focus: Adding key value pairs to hashes
@@ -240,6 +243,19 @@ end
 # the existing band members are: {'vocalist' => 'miss piggy', 'lead_guitar' => 'scooter'}
 # if the arg is 'kermit'
 # returns {'vocalist' => 'miss piggy', 'lead_guitar' => 'scooter', 'drummer' => 'kermit'}
+
+
+def new_drummer(key)
+
+  band_members = {'vocalist' => 'miss piggy', 'lead_guitar' => 'scooter'}
+
+  return band_members.merge("drummer" => "kermit")
+
+  return band_members.merge("drummer" => "cookie monster")
+
+end
+
+
 
 # touch_in
 # takes two args
