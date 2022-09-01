@@ -246,13 +246,13 @@ end
 
 
 def new_drummer(key)
-
+  
   band_members = {'vocalist' => 'miss piggy', 'lead_guitar' => 'scooter'}
 
-  return band_members.merge("drummer" => "kermit")
-
-  return band_members.merge("drummer" => "cookie monster")
-
+  if band_members.length != 3
+    return band_members.merge("drummer" => gets.chomp)
+  else
+  end  
 end
 
 
@@ -272,6 +272,16 @@ end
 # the existing band members are: {'vocalist' => 'miss piggy', 'lead_guitar' => 'scooter'}
 # if the arg is 'waldo'
 # returns {'vocalist' => 'waldo', 'lead_guitar' => 'scooter'}
+
+def new_vocalist(key)
+  
+  band_members = {'vocalist' => 'miss piggy', 'lead_guitar' => 'scooter'}
+
+  if band_members["vocalist"] = "miss piggy"
+    return band_members.merge("vocalist" => gets.chomp)
+  else
+  end  
+end
 
 ### Focus: Using the Ruby docs to find the right method/s
 
