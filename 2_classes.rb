@@ -38,17 +38,49 @@ end
 
 # Animal
 # no methods required
+class Animal
+  
+  def tiger
+    return 'Your animal is  ' + @type
+  end
+
+end
+
 
 # Vehicle
 # no methods required
+
+class Vehicle
+  
+  def car
+    return 'Your car is  ' + @type
+  end
+
+end
 
 # Cat
 # speak
 # returns 'miaow'
 
+class Cat
+  
+  def speak
+    return 'miaow'
+  end
+
+end
+
 # Dog
 # speak
 # returns 'woof'
+
+class Dog
+  
+  def speak
+    return 'woof'
+  end
+
+end
 
 # StringFormatter
 # block_caps
@@ -57,6 +89,17 @@ end
 # lower_case
 # takes a string as an arg
 # returns the string in lower case
+
+class StringFormatter
+
+  def block_caps(string)
+    return string.upcase
+  end
+
+  def lower_case(string)
+    return string.downcase
+  end
+end
 
 # Calculator
 # add
@@ -75,6 +118,25 @@ end
 # divides the first by the second
 # returns the result
 
+class Calculator
+
+  def add(num1, num2)
+    return num1 + num2
+  end
+
+  def subtract(num1, num2)
+    return num1 - num2
+  end
+
+  def multiply(num1, num2)
+    return num1 * num2
+  end
+
+  def divide(num1, num2)
+    return num1 / num2
+  end
+end
+
 # Apprentice
 # is instantiated with two strings
 # a name and a cohort name
@@ -85,6 +147,27 @@ end
 # full_details
 # returns name and cohort, separated by one comma and one space
 # 'E.g. "Rita Smith, June 2030"'
+
+class Apprentice
+  def initialize(name, cohort)
+    @name = name
+    @cohort = cohort
+  end
+  def name 
+    return @name
+  end
+
+  def cohort
+    return @cohort
+  end
+  
+  def full_details
+    return name + ", " + cohort 
+  end
+end
+
+
+
 
 # Cohort
 # is instantiated with three strings
@@ -97,3 +180,29 @@ end
 # returns the end_date as a Date object
 # duration
 # returns the number of days between start_date and end_date
+
+class Cohort
+  def initialize(name, start_date, end_date)
+    @name = name
+    @d = Date.parse("1st January 2060")
+    @d2 =  Date.parse("2060/01/08")
+  end
+
+  def name
+    return @name
+  end
+
+  def start_date
+    return @d
+    puts @d
+  end
+
+  def end_date
+    return @d2
+    puts @d2
+  end
+  
+  def duration
+    return @d2 - @d
+  end
+end
